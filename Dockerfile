@@ -18,7 +18,7 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
 
-COPY ./src tsconfig.json ./
+COPY src tsconfig.json ./
 RUN yarn build
 
 ## 実行環境 ################################################
