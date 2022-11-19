@@ -22,7 +22,8 @@ COPY src tsconfig.json ./
 RUN yarn build
 
 ## 実行環境 ################################################
-FROM gcr.io/distroless/nodejs:18-debug
+FROM gcr.io/distroless/nodejs:18
+#FROM gcr.io/distroless/nodejs:18-debug
 ENV NODE_ENV production
 
 WORKDIR /app
