@@ -1,3 +1,4 @@
+// テスト用サンプルコード（テスト）
 import { sum } from './calc'
 
 test('sum', () => {
