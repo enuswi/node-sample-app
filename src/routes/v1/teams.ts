@@ -2,14 +2,25 @@ import express, {Express, Request, Response} from 'express'
 
 const app: Express = express()
 
-app.get('/', function (req: Request, res: Response) {
+app.get('/', async (req: Request, res: Response) => {
+  /**
+   * TODO
+   * - アーキテクチャ検討
+   * - ドメインオブジェクト作成
+   */
   res.json({
     list: [
       {
-        name: '東京ヤクルトスワローズ'
+        id: 1,
+        league: 1,
+        name: '東京ヤクルトスワローズ',
+        rank: 1
       },
       {
-        name: 'オリックスバファローズ'
+        id: 2,
+        league: 2,
+        name: 'オリックスバファローズ',
+        rank: 1
       }
     ]
   })
